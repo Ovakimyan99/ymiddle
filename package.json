@@ -1,0 +1,32 @@
+{
+  "name": "ymiddle",
+  "version": "1.0.0",
+  "description": "YMiddle course",
+  "main": "index.js",
+  "browserslist": "> 2%, last 2 versions, not dead",
+  "scripts": {
+    "dev": "parcel index.hbs --no-cache",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ovakimyan99/ymiddle.git"
+  },
+  "author": "Tigran Ovagim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ovakimyan99/ymiddle/issues"
+  },
+  "homepage": "https://github.com/Ovakimyan99/ymiddle#readme",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "parcel": "^2.8.0"
+  },
+  "targets": {
+    "frontend": {
+      "source": "index.hbs"
+    }
+  },
+  "dependencies": {}
+}
