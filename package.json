@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "YMiddle course",
   "main": "index.js",
-  "browserslist": "> 2%, last 2 versions, not dead",
   "scripts": {
-    "dev": "parcel index.hbs --no-cache",
-    "build": "parcel build",
+    "dev": "parcel src/pages/index.hbs --no-cache",
+    "build": "parcel build src/pages/index.hbs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,13 +19,18 @@
   },
   "homepage": "https://github.com/Ovakimyan99/ymiddle#readme",
   "devDependencies": {
+    "@parcel/config-default": "^2.8.0",
+    "autoprefixer": "^10.4.13",
+    "parcel": "^2.8.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^15.0.1",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.0"
+  },
+  "dependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "parcel": "^2.8.0"
-  },
-  "targets": {
-    "frontend": {
-      "source": "index.hbs"
-    }
-  },
-  "dependencies": {}
+    "doiuse": "^4.4.1",
+    "handlebars": "^4.7.7",
+    "normalize.css": "^8.0.1"
+  }
 }

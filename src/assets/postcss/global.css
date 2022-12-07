@@ -1,0 +1,15 @@
+html {
+    font-size: 10px;
+}
+
+.va-b {
+    vertical-align: bottom;
+}
+
+.table-cell-right {
+    text-align: right;
+}
+
+.none {
+    display: none;
+}
