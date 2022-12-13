@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat</title>
-    <link rel="stylesheet" href="../assets/postcss/main.pcss">
-    <link rel="stylesheet" href="../assets/postcss/chat/chat.pcss">
+    <link rel="stylesheet" href="../assets/postcss/main.css">
+    <link rel="stylesheet" href="../assets/postcss/chat/chat.css">
 </head>
 <body>
     <main class="chat-layout">
-        <section class="chat-panel">
-            {{> 'ui/input/InputSearch'}}
-            {{> 'pages/chat/ChatList'}}
-        </section>
-        <section>
+        {{> 'common/AppAside'}}
+        <section class="chat-content-wrapper">
             {{{body}}}
         </section>
     </main>

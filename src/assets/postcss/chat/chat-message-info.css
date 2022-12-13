@@ -1,0 +1,29 @@
+.message-info {
+    display: inline-block;
+    float: right;
+    margin: 0.5rem 0 0;
+    color: var(--placeholder);
+}
+
+.message-image .message-info__icon {
+    display: none;
+}
+
+.mine .check .message-info {
+    color: var(--accent);
+}
+
+.mine .message-image.check .message-info {
+    color: var(--base-white);
+}
+
+.message-image .message-info,
+.message-image.check .message-info {
+    position: absolute;
+    bottom: 1.1rem;
+    right: 1.1rem;
+    padding: .2rem .7rem;
+    background-color: rgba(82, 82, 82, 0.5);;
+    color: var(--base-white);
+    border-radius: .8rem;
+}

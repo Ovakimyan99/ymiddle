@@ -1,0 +1,69 @@
+.message-by-day {
+    padding: .8rem 0 3rem;
+}
+
+.message-by-day__day {
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.message-by-day__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.message-by-day__list .message {
+    max-width: 60%;
+    margin-top: 1rem;
+}
+
+.message-by-day__list .message:first-child {
+    margin-top: 0;
+}
+
+.message-by-day__list .mine {
+    margin-left: auto;
+}
+
+.message-by-day__list .message:first-child {
+    margin-top: 0;
+}
+
+/* Message */
+.message {
+    border-radius: 1.2rem;
+    padding: 1.1rem;
+    background-color: var(--block-placeholder-bg);
+    text-align: left;
+}
+
+.message.mine {
+    background-color: var(--accent-opacity);
+}
+
+.message.message-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 32rem;
+    padding: 0;
+    border: .1rem solid var(--line);
+}
+
+.message-image.mine {
+    border: .1rem solid var(--accent-opacity);
+}
+
+.message-image__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message-text {
+    display: inline;
+    margin: 0;
+}

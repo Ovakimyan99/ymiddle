@@ -1,0 +1,9 @@
+.message-scope {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.message-scope.mine {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}

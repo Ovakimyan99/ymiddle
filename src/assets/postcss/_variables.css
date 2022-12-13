@@ -9,9 +9,15 @@
     --base-white: #ffffff;
     --line: #eaeaea;
 
+    --block-placeholder-bg-700: rgba(239, 239, 239, 0.7);
+    --placeholder-200: rgba(153, 153, 153, 0.2);
+
     /* Transition */
     --default-transition: .2s ease-out;
     --default-transition-fast: .16s cubic-bezier(.12, 1, .48, 1);
     --default-transition-slow: .48s cubic-bezier(.12, 1, .48, 1);
     --default-transition-Xslow: 1s cubic-bezier(.12, 1, .48, 1);
+
+    /* Height */
+    --height-header: 55px;
 }

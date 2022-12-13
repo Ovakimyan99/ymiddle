@@ -1,0 +1,9 @@
+.chat-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.chat-content-wrapper {
+    position: relative;
+    flex: 1;
+}

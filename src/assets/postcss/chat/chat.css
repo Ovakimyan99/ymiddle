@@ -1,0 +1,103 @@
+@import "../common/sidebar.css";
+@import "chat-panel.css";
+@import "chat-list.css";
+@import "chat-list-item.css";
+@import "layout.css";
+@import "chat-messages.css";
+@import "chat-message-scope.css";
+@import "chat-message-info.css";
+@import "empty-chat.css";
+
+.chat-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 2rem;
+}
+
+.chat-page-content {
+    position: relative;
+    height: 100%;
+    max-height: calc(100vh - 2 * var(--height-header) - 2rem);
+    overflow-y: auto;
+    padding-right: .5rem;
+    margin-right: -.5rem;
+}
+
+/* Content / Messages Content */
+.chat-messages-content {
+    padding-top: 2rem;
+}
+
+/* Chat Header */
+.chat-header {
+    border-bottom: .1rem solid var(--line);
+}
+
+.chat-header__user-image {
+    margin-right: 1rem;
+}
+
+.chat-header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: auto;
+    line-height: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: all var(--default-transition-Xslow);
+}
+
+._active.chat-header__menu,
+.chat-header__menu:hover {
+    background-color: var(--block-placeholder-bg);
+    color: var(--accent);
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+    max-height: 30rem;
+    min-height: 5.5rem;
+    border-top: .1rem solid var(--line);
+}
+
+.chat-footer__menu {
+    padding: .1rem 0;
+    transition: all var(--default-transition-Xslow);
+}
+
+.chat-footer__menu:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.chat-footer__message-wrapper {
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.chat-footer__send-btn {
+    padding: .2rem 0;
+}
+
+/* Popus */
+.chat-page__popup-header {
+    position: absolute;
+    top: 1rem;
+    right: -1.1rem;
+}
+
+.chat-page__popup-footer {
+    position: absolute;
+    width: max-content;
+    bottom: 1rem;
+    left: .7rem;
+}

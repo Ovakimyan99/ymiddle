@@ -68,6 +68,10 @@ p {
     color: var(--accent-opacity);
 }
 
+.base-white {
+    color: var(--base-white);
+}
+
 .c-text {
     color: var(--text);
 }
