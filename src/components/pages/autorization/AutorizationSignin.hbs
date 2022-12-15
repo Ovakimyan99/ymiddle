@@ -1,0 +1,23 @@
+{{#> 'pages/autorization/AutorizationForm'}}
+    <div class="autorization-form__title">
+        {{> 'pages/autorization/AutorizationFormLegend' text='регистрация'}}
+    </div>
+
+    {{> 'ui/input/InputAutorize' type='input' id='mail' label='Почта'}}
+    {{> 'ui/input/InputAutorize' type='input' id='login' label='Логин'}}
+    {{> 'ui/input/InputAutorize' type='input' id='firstname' label='Имя'}}
+    {{> 'ui/input/InputAutorize' type='input' id='secondname' label='Фамилия'}}
+    {{> 'ui/input/InputAutorize' type='password' id='password' label='Пароль' error-input='error'}}
+    {{> 'ui/input/InputAutorize'
+        type='password'
+        id='passwordrepeat'
+        label='Пароль (еще раз)'
+        error-text='Пароли не совпадают'
+        error-input='error'
+    }}
+
+    <div class="autorization-form__buttons">
+        {{> 'ui/button/AppButton' text='Зарегистрироваться'}}
+        {{> 'ui/button/AppButton' link='link' text='Войти'}}
+    </div>
+{{/ 'pages/autorization/AutorizationForm' }}

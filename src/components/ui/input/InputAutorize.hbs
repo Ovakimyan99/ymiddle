@@ -1,1 +1,17 @@
-<input type="text" placeholder="input">
+<div class="input-autorize">
+    <input type="{{type}}"
+           id="{{id}}"
+           name="{{id}}"
+           placeholder=" "
+           class="input-autorize__input {{error-input}} t3"
+    >
+    <label class="input-autorize__label c-placeholder t3" for="{{id}}">
+        {{label}}
+    </label>
+
+    {{#if error-text}}
+        <span class="input-autorize__error">
+            {{error-text}}
+        </span>
+    {{/if}}
+</div>

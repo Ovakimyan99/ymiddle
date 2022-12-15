@@ -1,0 +1,53 @@
+.autorization-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-white);
+    min-height: 100vh;
+}
+
+.autorization-form {
+    display: flex;
+    width: 100%;
+    max-width: 34rem;
+    min-height: 46rem;
+    border-radius: 1.2rem;
+    box-shadow: var(--shadow-014);
+    background-color: var(--base-white);
+}
+
+.autorization-form-fieldset {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 6rem);
+    padding: 5rem 3rem 3rem;
+    margin: 0;
+    border: none;
+}
+
+.autorization-form__title {
+    display: block;
+    width: max-content;
+    margin: 0 auto 5rem;
+    text-transform: capitalize;
+}
+
+.input-autorize:not(:first-child) {
+    margin-top: 2.5rem;
+}
+
+.input-autorize:last-child {
+    background-color: red;
+}
+
+.autorization-form__buttons {
+    margin-top: 6.2rem;
+}
+
+.autorization-form__buttons.login {
+    margin-top: auto;
+}
+
+.autorization-form__buttons .app-button:not(:last-child) {
+    margin-bottom: .2rem;
+}

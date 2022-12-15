@@ -1,0 +1,13 @@
+{{#> 'pages/autorization/AutorizationForm'}}
+    <div class="autorization-form__title">
+        {{> 'pages/autorization/AutorizationFormLegend' text='вход'}}
+    </div>
+
+    {{> 'ui/input/InputAutorize' type='input' id='login' label='Логин'}}
+    {{> 'ui/input/InputAutorize' type='input' id='password' label='Пароль'}}
+
+    <div class="autorization-form__buttons login">
+        {{> 'ui/button/AppButton' text='Авторизоваться'}}
+        {{> 'ui/button/AppButton' link='link' text='Нет аккаунта?'}}
+    </div>
+{{/ 'pages/autorization/AutorizationForm' }}

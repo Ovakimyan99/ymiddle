@@ -1,0 +1,21 @@
+.profile-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.profile-content-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.profile-layout .aside-panel {
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.8rem;
+    cursor: pointer;
+}
+
+.profile-aside-btn {
+    width: 2.8rem;
+    height: 2.8rem;
+}

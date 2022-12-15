@@ -8,6 +8,7 @@
 
 /* Buttons */
 @import "button/circle-arrow-btn.css";
+@import "button/app-button.css";
 
 /* Modals */
 @import "../modals/popup-trigged.css";

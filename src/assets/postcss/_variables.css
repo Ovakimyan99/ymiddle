@@ -20,4 +20,7 @@
 
     /* Height */
     --height-header: 55px;
+
+    /* Shadows */
+    --shadow-014: 0 0 .6rem rgba(0, 0, 0, 0.14);
 }
