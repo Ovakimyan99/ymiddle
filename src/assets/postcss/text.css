@@ -80,7 +80,11 @@ p {
     color: var(--placeholder);
 }
 
-.error {
+.c-accent {
+    color: var(--accent);
+}
+
+.c-error {
     color: var(--error);
 }
 

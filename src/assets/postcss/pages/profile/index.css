@@ -1,3 +1,6 @@
+@import "change-info.css";
+@import "change-password.css";
+
 .profile-layout {
     display: flex;
     min-height: 100vh;
@@ -19,3 +22,89 @@
     width: 2.8rem;
     height: 2.8rem;
 }
+
+.profile-info-image {
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-info-image:hover .profile-info-image__overlay {
+    opacity: 1;
+}
+
+.profile-info-image__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color:  var(--base-white);
+    background-color: var(--base-dark-50);
+    opacity: 0;
+    transition: var(--default-transition-slow);
+}
+
+.profile-info-name {
+    margin: 2.1rem 0 5rem;
+    text-align: center;
+}
+
+/* ---------------------- */
+.profile-info-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 12rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6rem 0;
+}
+
+.profile-info-wrapper.min-h {
+    min-height: 50.7rem;
+}
+
+.profile-info-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.profile-info-list .profile-info-row:not(:last-child) {
+    border-bottom: 1px solid var(--line);
+}
+
+.profile-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.profile-info-row__key {}
+
+.profile-info-row__value {}
+
+/* ---------------------- */
+/* Profile-Info-Container */
+.profile-info-container {
+    width: 100%;
+    max-width: 51rem;
+    margin-bottom: auto;
+}
+
+.profile-info-container.mb-a {
+    margin-bottom: auto;
+}
+
+.profile-info-container--links {
+    margin-top: 4rem;
+}
+

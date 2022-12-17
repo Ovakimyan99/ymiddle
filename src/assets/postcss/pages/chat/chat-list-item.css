@@ -35,27 +35,6 @@
     background-color: var(--accent-opacity);
 }
 
-.user-chat__img-wrapper {
-    overflow: hidden;
-    background-color: var(--block-placeholder-bg);
-    border-radius: 50%;
-}
-
-.large > .user-chat__img-wrapper {
-    min-width: 13rem;
-    height: 13rem;
-}
-
-.normal > .user-chat__img-wrapper {
-    min-width: 4.7rem;
-    height: 4.7rem;
-}
-
-.small > .user-chat__img-wrapper {
-    min-width: 3.4rem;
-    height: 3.4rem;
-}
-
 .user-chat__img {
     width: 100%;
     height: 100%;

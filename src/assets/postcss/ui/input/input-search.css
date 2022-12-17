@@ -1,13 +1,37 @@
+.input-search-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    background: var(--block-placeholder-bg);
+    border-radius: .5rem;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.input-search-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    flex-shrink: 0;
+    color: var(--placeholder);
+}
+
 .input-search {
     width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 0;
     border: 0;
     outline: 0;
+    margin-left: .4rem;
     text-align: left;
-    background: url('../sprite/svg/search.svg') no-repeat var(--block-placeholder-bg);
-    background-position: 10px center;
-    background-size: auto 40%;
-    color: var(--placeholder);
-    border-radius: 5px;
+    color: var(--text);
+    background-color: transparent;
+    cursor: pointer;
     box-sizing: border-box;
+}
+
+.input-search:focus {
+    cursor: auto;
+}
+
+.input-search::placeholder {
+    color: var(--placeholder);
 }

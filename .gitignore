@@ -221,3 +221,6 @@ venv.bak/
 /requests
 /certs
 /.certs
+
+### Materials
+materials.txt

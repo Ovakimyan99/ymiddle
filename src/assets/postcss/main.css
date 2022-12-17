@@ -4,5 +4,6 @@
 @import "_font.css";
 @import "global.css";
 @import "text.css";
-@import "ui/main.css";
-@import "common/index.css";
+@import "./ui/main.css";
+@import "./common/index.css";
+@import "./modals/index.css";

@@ -1,0 +1,34 @@
+.user-chat__icon-wrapper {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+}
+
+.user-chat__img-wrapper.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-chat__img-wrapper {
+    overflow: hidden;
+    background-color: var(--block-placeholder-bg);
+    border-radius: 50%;
+    color: var(--icon-placeholder);
+}
+
+.large.user-chat__img-wrapper {
+    min-width: 13rem;
+    height: 13rem;
+}
+
+.normal.user-chat__img-wrapper {
+    min-width: 4.7rem;
+    height: 4.7rem;
+}
+
+.small.user-chat__img-wrapper {
+    min-width: 3.4rem;
+    height: 3.4rem;
+}

@@ -8,9 +8,13 @@
     --accent-opacity: #e4edfd;
     --base-white: #ffffff;
     --line: #eaeaea;
+    --icon-placeholder: #cdcdcd;
+    --base-dark: #000000;
 
-    --block-placeholder-bg-700: rgba(239, 239, 239, 0.7);
-    --placeholder-200: rgba(153, 153, 153, 0.2);
+    --block-placeholder-bg-700: rgba(239, 239, 239, .7);
+    --placeholder-200: rgba(153, 153, 153, .2);
+    --base-dark-50: rgba(0, 0, 0, .5);
+    --base-dark-40: rgba(0, 0, 0, .4);
 
     /* Transition */
     --default-transition: .2s ease-out;
