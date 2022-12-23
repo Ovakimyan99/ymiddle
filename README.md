@@ -1,6 +1,6 @@
 ## Ссылки
 * [Макет в Figma](https://www.figma.com/file/24EUnEHGEDNLdOcxg7ULwV/Chat?t=FYOdJnqKYgVIVxFe-0)
-* [Приложение в Netlify]()
+* [Приложение в Netlify](https://calm-belekoy-478e0c.netlify.app/)
 
 ## Описание
 Аналог телеграма. Мессенджер.
