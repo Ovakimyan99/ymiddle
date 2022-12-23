@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "YMiddle course",
   "scripts": {
-    "dev": "parcel -p 3000 src/pages/index.hbs --no-cache",
-    "build": "parcel build src/pages/index.hbs && server.js",
+    "dev": "parcel src/pages/index.hbs --no-cache",
+    "build": "parcel build src/pages/index.hbs && node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
