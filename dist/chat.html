@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/chat.5d13f7e2.css">
+    <link rel="stylesheet" href="/chat.13d85b3d.css">
+</head>
+<body><svg aria-hidden="true" width="0" height="0" style="position:absolute"><symbol id="db61ac5d7e4ffb33" viewBox="0 0 6 10" fill="none" ><path d="m1 9 4-4-4-4" stroke="currentColor"/></symbol><symbol id="7ad798b9786f7afe" viewBox="0 0 13 14" ><path fill-rule="evenodd" clip-rule="evenodd" d="M7.592 8.414a3.667 3.667 0 1 1-5.185-5.186 3.667 3.667 0 0 1 5.185 5.186Zm.44 1.383a5 5 0 1 1 .944-.943l3.566 3.567-.943.943-3.566-3.567Z" fill="currentColor"/></symbol><symbol id="b47c823200e88337" viewBox="0 0 3 16" ><circle cx="1.5" cy="2" r="1.5" fill="currentColor"/><circle cx="1.5" cy="8" r="1.5" fill="currentColor"/><circle cx="1.5" cy="14" r="1.5" fill="currentColor"/></symbol><symbol id="c51a7cf27ef523bc" viewBox="0 0 11 5" fill="none" ><path transform="scale(.99834 1.00166) rotate(45 -2.461 2.011)" stroke="currentColor" d="M0-.5h3.765"/><path transform="matrix(.70593 -.70828 .70593 .70828 3.358 5)" stroke="currentColor" d="M0-.5h5.647"/><path transform="matrix(.70593 -.70828 .70593 .70828 6.016 5)" stroke="currentColor" d="M0-.5h5.647"/></symbol><symbol id="e7b3ab6ed5e4bbfd" viewBox="0 0 30 30" ><path fill-rule="evenodd" clip-rule="evenodd" d="m6.187 12.5 7.576-7.576.943.943-7.577 7.576-.942-.943ZM8.7 15.014l7.577-7.576.943.943-7.577 7.576-.942-.943ZM14.043 20.357l7.576-7.576.943.942-7.576 7.576-.943-.942ZM16.557 22.87l7.577-7.576.942.943-7.576 7.576-.943-.942Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.557 22.87c-2.615 2.616-6.845 2.625-9.449.022-2.603-2.604-2.594-6.834.021-9.45l-.942-.942c-3.139 3.138-3.15 8.215-.026 11.339 3.124 3.124 8.201 3.113 11.34-.025l-.944-.943ZM21.62 12.78l.942.943c2.441-2.44 2.45-6.389.02-8.819-2.43-2.43-6.379-2.421-8.82.02l.944.943c1.917-1.918 5.02-1.925 6.929-.016 1.91 1.91 1.902 5.012-.016 6.93Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7 15.014c-1.742 1.744-1.749 4.564-.013 6.3 1.736 1.735 4.556 1.73 6.3-.014l-.944-.943a3.118 3.118 0 0 1-4.41.01 3.118 3.118 0 0 1 .01-4.41l-.942-.943Z" fill="currentColor"/></symbol><symbol id="aa0d4b60d8c39bdb" viewBox="0 0 13 12" fill="none" ><path fill="currentColor" d="M13 6.8H2V5.2h11z"/><path d="M6 11 2 6l4-5" stroke="currentColor" stroke-width="1.6"/></symbol><symbol id="2b1ea1b9f8e94e03" viewBox="0 0 22 22" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4 1.5h14A2.5 2.5 0 0 1 20.5 4v10l-5.98-1.595A11.998 11.998 0 0 0 11.427 12h-.856c-1.043 0-2.083.136-3.091.405L1.5 14V4A2.5 2.5 0 0 1 4 1.5ZM0 4a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4Zm8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" fill="currentColor"/></symbol></svg>
+    <main class="chat-layout">
+        <aside class="aside-panel">
+                <div class="chat-panel__header chat-container">
+                    <header class="app-header">
+                        <span class="chat-panel__profile-link t4 c-placeholder">
+                            Профиль
+                            <span class="chat-panel__profile-arrow">
+                                <svg class="app-icon --arrow-pointer ">
+                                    <use xlink:href="#db61ac5d7e4ffb33"></use>
+                                </svg>
+                            </span>
+                        </span>
+                    </header>
+                    <!--    Input   -->
+                    <!-- TODO: во 2 спринте при клике по враперу переключать фокус -->
+                    <div class="input-search-wrapper">
+                        <div class="input-search-icon">
+                            <svg class="app-icon --search ">
+                                <use xlink:href="#7ad798b9786f7afe"></use>
+                            </svg>
+                        </div>
+                        <input class="input-search t4" type="text" placeholder="Найти">
+                    </div>
+                </div>
+                <ul class="chat-wrapper">
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="user-chat chat-container">
+                        <table class="user-chat__info user-chat-conteiner">
+                            <tbody class="user-chat__info-body">
+                                <tr>
+                                    <!--  IMG Пользователя  -->
+                                    <td class="user-chat__profile-image" rowspan="2" colspan="2">
+                                        <div class="user-chat__img-wrapper  normal icon">
+                                        </div>
+                                    </td>
+                                    <!--  Прочее  -->
+                                    <th class="b2 user-chat__info-title">
+                                        Киноклуб
+                                    </th>
+                                    <th class="table-cell-right user-chat__info-time c-placeholder">
+                                        <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="none"></td>
+                                    <td class="t4 c-placeholder user-chat__info-message">
+                                        <span class="c-text">Вы:</span>
+                                        И Human Interface Guidelines и Material Design рекомендуют...
+                                    </td>
+                                    <td class="va-b table-cell-right">
+                                        <span class="t5 user-chat__info-counter">
+                                            4
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+        </aside>
+        <section class="chat-content-wrapper">
+
+<div class="chat-page-container">
+    <!--  Header  -->
+    <header class="chat-header app-header">
+        <div class="chat-header__user-image small">
+            <div class="user-chat__img-wrapper   icon">
+            </div>
+        </div>
+        <span class="b2 c-text">
+            Вадим
+        </span>
+        <div class="chat-header__menu c-text">
+            <svg class="app-icon --three_dots ">
+                <use xlink:href="#b47c823200e88337"></use>
+            </svg>
+        </div>
+    </header>
+
+    <div class="chat-page-content">
+        <!--  Messages  -->
+        <div class="chat-messages-content">
+            <div class="message-by-day">
+                <time datetime="2008-02-14" class="message-by-day__day t4 c-placeholder">19 Апреля</time>
+            
+                <ul class="message-scope message-by-day__list mine">
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine  c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="message-scope message-by-day__list ">
+                    <li class="message  check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image  check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image  ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info   t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message   c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info   t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message  check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="message-scope message-by-day__list mine">
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine  c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="message-by-day">
+                <time datetime="2008-02-14" class="message-by-day__day t4 c-placeholder">19 Апреля</time>
+            
+                <ul class="message-scope message-by-day__list mine">
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine  c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="message-scope message-by-day__list ">
+                    <li class="message  check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image  check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image  ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info   t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message   c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info   t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message  check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="message-scope message-by-day__list mine">
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine  c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="message-by-day">
+                <time datetime="2008-02-14" class="message-by-day__day t4 c-placeholder">19 Апреля</time>
+            
+                <ul class="message-scope message-by-day__list mine">
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine  c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="message-scope message-by-day__list ">
+                    <li class="message  check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image  check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image  ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info   t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message   c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info   t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message  check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info  check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="message-scope message-by-day__list mine">
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine check">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message message-image mine ">
+                        <img class="message-image__content" src="/camera.a28251e9.png" alt="">
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine  c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine  t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                    <li class="message mine check c-text">
+                        <p class="message-text t4 c-text">
+                            Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.
+                            Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.
+                        </p>
+                        <div class="message-info mine check t6">
+                            <span class="message-info__icon">
+                                <svg class="app-icon --check-message ">
+                                    <use xlink:href="#c51a7cf27ef523bc"></use>
+                                </svg>
+                            </span>
+                            <time class="time-or-weekday t6" datetime="2008-02-14 20:00">21:00</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--  Popus  -->
+    </div>
+
+    <!--  Send message  -->
+    <footer class="chat-footer app-header">
+        <!--  Icon Btn  -->
+        <div class="chat-footer__menu c-placeholder">
+            <svg class="app-icon --materials ">
+                <use xlink:href="#e7b3ab6ed5e4bbfd"></use>
+            </svg>
+        </div>
+    
+        <!--  Input for Message  -->
+        <div class="chat-footer__message-wrapper">
+            <div contenteditable="true" class="input-message t4" autofocus="">Введите...</div>
+        </div>
+    
+        <!--  Send Btn  -->
+        <div class="chat-footer__send-btn">
+            <button class="circle-arrow-btn base-white --right">
+                <svg class="app-icon --arrow ">
+                    <use xlink:href="#aa0d4b60d8c39bdb"></use>
+                </svg>
+            </button>
+        </div>
+    </footer>
+</div>
+
+        </section>
+
+<dialog class="the-modal">
+    <div class="modal-mini error text">
+        <span class="modal-mini__title t1 ">Загрузите файл</span>
+        <div class="modal-mini__content">
+                            <a href="#" class="c-accent t4">Выбрать файл<br>на компьютере</a>
+        </div>
+    
+        <!--  Кнопка  -->
+        <button class="app-button  ">
+                <span class="t3">Текст кнопки</span>
+        </button>
+    
+        <!--  Уведомление об ошибке  -->
+            <div class="error-message c-error t5">
+                error text
+            </div>
+    </div>
+</dialog>
+    </main>
+<script src="/chat.a76340e4.js"></script></body>
+</html>
