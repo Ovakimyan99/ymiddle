@@ -1,0 +1,51 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    overflow: hidden;
+    font-size: 1.2rem;
+    @mixin interMedium;
+}
+
+.va-b {
+    vertical-align: bottom;
+}
+
+.table-cell-right {
+    text-align: right;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 1rem 0;
+    height: var(--height-header);
+    box-sizing: border-box;
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.none {
+    display: none;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    margin-right: 4px;
+    width: .3rem;
+    padding-right: 3px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: var(--block-placeholder-bg-700);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--placeholder-200);
+    border-radius: 2px;
+}

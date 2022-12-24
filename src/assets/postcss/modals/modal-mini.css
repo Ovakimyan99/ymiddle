@@ -1,0 +1,27 @@
+.modal-mini {
+    max-width: 34rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 3rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 .6rem var(--shadow-014);
+    background-color: var(--base-white);
+}
+
+.modal-mini.error-message {
+    padding-bottom: 3rem;
+}
+
+.modal-mini__content {
+    margin: 4.5rem auto;
+}
+
+.error-message {
+    margin-top: 1.4rem;
+}
+
+.modal-mini a {
+    text-decoration: underline;
+}

@@ -1,0 +1,28 @@
+.popup-triggered {
+    width: max-content;
+    margin: 0;
+    padding: 1.5rem;
+    list-style-type: none;
+    background-color: var(--base-white);
+    border-radius: 1.2rem;
+    box-shadow: 0 0 .6rem rgba(0, 0, 0, 0.14);
+}
+
+.popup-triggered__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.popup-triggered__item:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+
+.popup-triggered__item-img {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--accent);
+}

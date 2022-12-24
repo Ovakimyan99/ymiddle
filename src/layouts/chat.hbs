@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../assets/postcss/main.css">
+    <link rel="stylesheet" href="../assets/postcss/pages/chat/index.css">
+</head>
+<body>
+    <main class="chat-layout">
+        {{> 'common/AppAside'}}
+        <section class="chat-content-wrapper">
+            {{{body}}}
+        </section>
+
+        {{#> 'modals/TheModal' open=''}}
+            {{#> 'modals/ModalMini' title='Загрузите файл' error-message='error text'}}
+                <a href="#" class="c-accent t4">Выбрать файл<br>на компьютере</a>
+            {{/ 'modals/ModalMini'}}
+        {{/ 'modals/TheModal'}}
+    </main>
+</body>
+</html>

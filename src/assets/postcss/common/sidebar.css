@@ -1,0 +1,7 @@
+.aside-panel {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    border-right: .1rem solid var(--line);
+}

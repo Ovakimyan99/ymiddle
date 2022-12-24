@@ -1,0 +1,25 @@
+{{!< profile}}
+
+{{#> 'pages/profile/ProfileInfoWrapper' class-wrapper='min-h'}}
+    <!--    Image   -->
+    {{> 'common/AppProfileImage' icon=true size='large' class-img='change-info-page__img'}}
+
+    <!--    Container   -->
+    {{#> 'pages/profile/ProfileInfoContainer' class-container='mb-a'}}
+        <!--    List   -->
+        {{#> 'pages/profile/ProfileInfoList'}}
+            <!--    Rows   -->
+            {{> 'pages/profile/ProfileInfoRow' key-text='Почта' value-text='tigr.kman@gma' }}
+            {{> 'pages/profile/ProfileInfoRow' key-text='Логин' value-text='labllava' }}
+            {{> 'pages/profile/ProfileInfoRow' key-text='Имя' value-text='Тигран' }}
+            {{> 'pages/profile/ProfileInfoRow' key-text='Фамилия' value-text='Тигранович' }}
+            {{> 'pages/profile/ProfileInfoRow' key-text='Имя в чате' value-text='Тико' }}
+            {{> 'pages/profile/ProfileInfoRow' key-text='Телефон' value-text='+7 (909) 967 30 30' }}
+            <!--    Rows  / -->
+        {{/ 'pages/profile/ProfileInfoList'}}
+    {{/ 'pages/profile/ProfileInfoContainer'}}
+
+    <!--    Container   -->
+    {{> 'ui/button/AppButton' text='Сохранить' class-button='profile-info__btn'}}
+{{/ 'pages/profile/ProfileInfoWrapper'}}
+

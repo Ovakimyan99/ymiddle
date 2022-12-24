@@ -1,0 +1,17 @@
+.circle-arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8rem;
+    width: 2.8rem;
+    background-color: var(--accent);
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.circle-arrow-btn.--right {
+    transform: rotate(180deg);
+}
+.circle-arrow-btn.--left {}

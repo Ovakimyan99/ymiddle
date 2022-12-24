@@ -1,0 +1,93 @@
+.h1 {
+    @mixin interMedium;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.h2 {
+    @mixin interMedium;
+    font-size: 2rem;
+    line-height: 1;
+ }
+
+.t1 {
+    @mixin interMedium;
+    font-size: 1.5rem;
+}
+
+.t2 {
+    @mixin interMedium;
+    font-size: 1.4rem;
+}
+
+.t3 {
+    @mixin interMedium;
+    font-size: 1.3rem;
+}
+
+.t4 {
+    @mixin interMedium;
+    font-size: 1.2rem;
+}
+
+.t5 {
+    @mixin interMedium;
+    font-size: 1.1rem;
+}
+
+.t6 {
+    @mixin interMedium;
+    font-size: .9rem;
+}
+
+.b1 {
+    @mixin interSemiBold;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.b2 {
+    @mixin interSemiBold;
+    font-size: 1.3rem;
+}
+
+p {
+    @mixin interMedium;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.link {
+    cursor: pointer;
+    user-select: none;
+    transition: var(--default-transition);
+    color: var(--accent);
+}
+
+.link:hover {
+    color: var(--accent-opacity);
+}
+
+.base-white {
+    color: var(--base-white);
+}
+
+.c-text {
+    color: var(--text);
+}
+
+.c-placeholder {
+    color: var(--placeholder);
+}
+
+.c-accent {
+    color: var(--accent);
+}
+
+.c-error {
+    color: var(--error);
+}
+
+.error-bg {
+    background-color: var(--error);
+}

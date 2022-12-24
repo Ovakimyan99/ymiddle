@@ -1,0 +1,16 @@
+<div class="modal-mini {{error-message}}">
+    <span class="modal-mini__title t1 {{title-error}}">{{title}}</span>
+    <div class="modal-mini__content">
+        {{> @partial-block}}
+    </div>
+
+    <!--  Кнопка  -->
+    {{> 'ui/button/AppButton' text='Текст кнопки'}}
+
+    <!--  Уведомление об ошибке  -->
+    {{#if error-message}}
+        <div class="error-message c-error t5">
+            {{error-message}}
+        </div>
+    {{/if}}
+</div>

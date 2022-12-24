@@ -1,0 +1,10 @@
+.chat-wrapper {
+    margin: 0;
+    padding: .35rem 0;
+    max-width: 31rem;
+    overflow-y: auto;
+}
+
+.chat-container {
+    padding: 0 1rem;
+}

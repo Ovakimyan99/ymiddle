@@ -1,0 +1,9 @@
+<div class="user-chat__img-wrapper {{class-img}} {{size}} icon">
+    {{#if link}}
+        <img class="user-chat__img" src="{{link}}" alt="{{img-title}}" title="{{img-title}}">
+    {{else if icon}}
+        <span class="user-chat__icon-wrapper">
+            {{> 'ui/icon/AppIcon' name='static_resource'}}
+        </span>
+    {{/if}}
+</div>

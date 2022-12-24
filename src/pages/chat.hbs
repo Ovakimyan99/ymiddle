@@ -1,0 +1,28 @@
+{{!< chat}}
+
+<div class="chat-page-container">
+    <!--  Header  -->
+    {{> 'pages/chat/ChatHeader'}}
+
+    <div class="chat-page-content">
+        <!--  Messages  -->
+        <div class="chat-messages-content">
+            {{> 'pages/chat/ChatMessageByDay'}}
+            {{> 'pages/chat/ChatMessageByDay'}}
+            {{> 'pages/chat/ChatMessageByDay'}}
+        </div>
+
+        <!--  Popus  -->
+        {{#if false}}
+            <div class="chat-page__popup-header">
+                {{> 'modals/popups/PopupTriggered'}}
+            </div>
+            <div class="chat-page__popup-footer">
+                {{> 'modals/popups/PopupTriggered'}}
+            </div>
+        {{/if}}
+    </div>
+
+    <!--  Send message  -->
+    {{> 'pages/chat/ChatFooter'}}
+</div>
